@@ -6,7 +6,7 @@ faker_data=data/en
 mkdir -p $faker_data
 
 # 1. Contact Information
-cat > $faker_data/email_addresses.txt <<EOF
+cat > $faker_data/email_address.txt <<EOF
 alice@example.com
 bob.smith@gmail.com
 charlie99@yahoo.com
@@ -19,7 +19,7 @@ admin@website.io
 support@helpdesk.net
 EOF
 
-cat > $faker_data/phone_numbers.txt <<EOF
+cat > $faker_data/phone_number.txt <<EOF
 +1-202-555-0173
 +44 7911 123456
 +33 6 12 34 56 78
@@ -32,7 +32,7 @@ cat > $faker_data/phone_numbers.txt <<EOF
 +7 926 123-45-67
 EOF
 
-cat > $faker_data/mailing_addresses.txt <<EOF
+cat > $faker_data/mailing_address.txt <<EOF
 New York, NY, 10001, USA
 London, ENG, SW1A 1AA, UK
 Paris, Île-de-France, 75001, France
@@ -45,7 +45,7 @@ São Paulo, SP, 01000-000, Brazil
 Moscow, Moscow Oblast, 101000, Russia
 EOF
 
-cat > $faker_data/social_handles.txt <<EOF
+cat > $faker_data/social_handle.txt <<EOF
 @the_real_alice
 @bobsmith_dev
 @charlie.cat
@@ -60,7 +60,7 @@ EOF
 
 # 2. Technical / IT
 
-cat > $faker_data/ip_addresses.txt <<EOF
+cat > $faker_data/ip_address.txt <<EOF
 192.168.0.1
 10.0.0.42
 172.16.5.5
@@ -73,7 +73,7 @@ fc00::/7
 ff02::1
 EOF
 
-cat > $faker_data/urls_domains.txt <<EOF
+cat > $faker_data/urls_domain.txt <<EOF
 https://example.com
 http://localhost:3000
 https://dev.api.company.org
@@ -86,7 +86,7 @@ https://dashboard.app.io
 http://blog.engineering.net
 EOF
 
-cat > $faker_data/user_agents.txt <<EOF
+cat > $faker_data/user_agent.txt <<EOF
 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36
 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Gecko/20100101 Firefox/117.0
 Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/118.0.0.0 Safari/537.36
@@ -99,7 +99,7 @@ Go-http-client/2.0
 okhttp/4.9.0
 EOF
 
-cat > $faker_data/mac_addresses.txt <<EOF
+cat > $faker_data/mac_address.txt <<EOF
 00:1A:2B:3C:4D:5E
 01:23:45:67:89:AB
 DE:AD:BE:EF:00:01
@@ -112,7 +112,7 @@ FC:FB:FB:01:FA:CE
 3C:5A:B4:21:43:65
 EOF
 
-cat > $faker_data/uuids.txt <<EOF
+cat > $faker_data/uuid.txt <<EOF
 550e8400-e29b-41d4-a716-446655440000
 f47ac10b-58cc-4372-a567-0e02b2c3d479
 6ba7b810-9dad-11d1-80b4-00c04fd430c8
@@ -125,7 +125,7 @@ c1a0de3c-667e-4fc2-92c7-bb4c3b1890f1
 dcab3b6d-2d45-4c66-89ab-e86b80f6e7da
 EOF
 
-cat > $faker_data/file_names.txt <<EOF
+cat > $faker_data/file_name.txt <<EOF
 document.pdf
 resume.docx
 report.csv
@@ -148,7 +148,7 @@ echo "✅ Faker data files generated in ./faker_data"
 
 # 3. Financial
 
-cat > $faker_data/ibans.txt <<EOF
+cat > $faker_data/iban.txt <<EOF
 DE89370400440532013000
 GB82WEST12345698765432
 FR1420041010050500013M02606
@@ -161,7 +161,7 @@ AT611904300234573201
 PT50000201231234567890154
 EOF
 
-cat > $faker_data/credit_cards.txt <<EOF
+cat > $faker_data/credit_card.txt <<EOF
 4111111111111111
 5500000000000004
 340000000000009
@@ -174,7 +174,7 @@ cat > $faker_data/credit_cards.txt <<EOF
 5890050000000012
 EOF
 
-cat > $faker_data/currency_values.txt <<EOF
+cat > $faker_data/currency_value.txt <<EOF
 12.99 USD
 99.50 EUR
 1500.00 GBP
@@ -202,7 +202,7 @@ EOF
 
 # 4. Identifiers
 
-cat > $faker_data/auto_ids.txt <<EOF
+cat > $faker_data/auto_id.txt <<EOF
 1
 2
 3
@@ -215,7 +215,7 @@ cat > $faker_data/auto_ids.txt <<EOF
 10
 EOF
 
-cat > $faker_data/barcodes.txt <<EOF
+cat > $faker_data/barcode.txt <<EOF
 9780306406157
 4006381333931
 73513537
@@ -230,7 +230,7 @@ EOF
 
 # 5. Business
 
-cat > $faker_data/company_names.txt <<EOF
+cat > $faker_data/company_name.txt <<EOF
 Globex Corporation
 Initech
 Umbrella Corp
@@ -243,7 +243,7 @@ Cyberdyne Systems
 Wonka Industries
 EOF
 
-cat > $faker_data/job_titles.txt <<EOF
+cat > $faker_data/job_title.txt <<EOF
 Software Engineer
 Project Manager
 UX Designer
@@ -256,7 +256,7 @@ Legal Counsel
 Product Owner
 EOF
 
-cat > $faker_data/product_names.txt <<EOF
+cat > $faker_data/product_name.txt <<EOF
 UltraClean 3000
 WidgetMaster Pro
 EcoLite Bulb
@@ -269,7 +269,7 @@ PocketProjector
 FlexiChair Ergo
 EOF
 
-cat > $faker_data/departments.txt <<EOF
+cat > $faker_data/department.txt <<EOF
 Engineering
 Marketing
 Sales
@@ -287,7 +287,7 @@ echo "✅ Additional faker data files generated in \$faker_data = $faker_data"
 
 # 6. E-commerce
 
-cat > $faker_data/product_skus.txt <<EOF
+cat > $faker_data/product_sku.txt <<EOF
 SKU-0001-A1
 PRD-442-BX
 ITEM-98321-QZ
@@ -300,7 +300,7 @@ WTCH-XL-002
 BOX-0098-GREEN
 EOF
 
-cat > $faker_data/cart_totals.txt <<EOF
+cat > $faker_data/cart_total.txt <<EOF
 12.50
 49.99
 5.00
@@ -313,7 +313,7 @@ cat > $faker_data/cart_totals.txt <<EOF
 2.49
 EOF
 
-cat > $faker_data/transactions.txt <<EOF
+cat > $faker_data/transaction.txt <<EOF
 2024-01-10T10:45:00Z, Visa
 2024-02-15T16:00:30Z, PayPal
 2024-03-01T09:30:45Z, Mastercard
@@ -328,7 +328,7 @@ EOF
 
 # 7. Customizable Text
 
-cat > $faker_data/markdown_snippets.txt <<EOF
+cat > $faker_data/markdown_snippet.txt <<EOF
 # Welcome to Our App
 
 **Bold** and _italic_ styles supported.
@@ -344,7 +344,7 @@ def hello():
 \`\`\`
 EOF
 
-cat > $faker_data/html_fragments.txt <<EOF
+cat > $faker_data/html_fragment.txt <<EOF
 <div class="card">
   <h1>Title</h1>
   <p>This is a <strong>sample</strong> paragraph.</p>
@@ -358,7 +358,7 @@ cat > $faker_data/html_fragments.txt <<EOF
 <img src="image.jpg" alt="Sample image" />
 EOF
 
-cat > $faker_data/sql_queries.txt <<EOF
+cat > $faker_data/sql_query.txt <<EOF
 SELECT * FROM users WHERE active = 1;
 
 INSERT INTO orders (user_id, total, status) VALUES (1, 99.99, 'pending');
@@ -370,7 +370,7 @@ EOF
 
 # 8. Scientific / Engineering
 
-cat > $faker_data/geocoordinates.txt <<EOF
+cat > $faker_data/lat_lon.txt <<EOF
 40.7128,-74.0060
 51.5074,-0.1278
 48.8566,2.3522
@@ -383,7 +383,7 @@ cat > $faker_data/geocoordinates.txt <<EOF
 37.7749,-122.4194
 EOF
 
-cat > $faker_data/units.txt <<EOF
+cat > $faker_data/unit.txt <<EOF
 12.5 cm
 45 kg
 98.6 °F
@@ -396,7 +396,7 @@ cat > $faker_data/units.txt <<EOF
 300 lux
 EOF
 
-cat > $faker_data/timestamps.txt <<EOF
+cat > $faker_data/timestamp.txt <<EOF
 1716459600
 2025-05-23T21:00:00+02:00
 Friday, 23 May 2025 21:00
