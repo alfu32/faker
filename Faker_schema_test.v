@@ -2,19 +2,20 @@ module faker
 
 struct UserProfile {
 pub mut:
-	first_name   string @[fake_source: 'first-name']
-	last_name    string @[fake_source: 'last-name']
-	company_name string @[fake_source: company_names]
-	email        string @[fake_source: email_addresses]
-	phone        string @[fake_source: phone_numbers]
+	first_name     string @[fake_source: first_name]
+	last_name      string @[fake_source: last_name]
+	company_name   string @[fake_source: company_name]
+	email          string @[fake_source: email_address]
+	phone          string @[fake_source: phone_number]
+	ip             string @[fake_source: ip_v4]
+	accept_meeting string @[fake_list: 'yes,maybe,no']
+	accepted_agb   string @[fake_list: 'true,false']
 }
 
 fn test_generate_user_profiles() {
-	mut ftl := FakerTypedList{
-		helper: Faker{}
-	}
+	mut helper := Faker{}
 
-	profiles := ftl.generate[UserProfile](10) or {
+	profiles := helper.generate[UserProfile](10) or {
 		print(err)
 		[]UserProfile{}
 	}
@@ -31,21 +32,21 @@ fn test_generate_user_profiles() {
 }
 
 struct Transaction {
-	product_sku string @[fake_source: 'product_skus']
-	price       string @[fake_source: 'cart_totals']
-	timestamp   string @[fake_source: 'timestamps']
+	product_sku string @[fake_source: 'product_sku']
+	price       string @[fake_source: 'cart_total']
+	timestamp   string @[fake_source: 'timestamp']
+	environment string @[fake_list: 'dev,tst,acc,uat,trn,prd']
+	weather     string @[fake_list: 'sunny,clouds,rain,snow,cold,hot,breezy']
 }
 
 fn test_generate_transactions() {
-	mut ftl := FakerTypedList{
-		helper: Faker{}
-	}
+	mut helper := Faker{}
 
-	txs := ftl.generate[Transaction](3) or {
+	txs := helper.generate[Transaction](20) or {
 		print(err)
 		[]Transaction{}
 	}
-	assert txs.len == 3
+	assert txs.len == 20
 
 	for tx in txs {
 		assert tx.product_sku.starts_with('SKU') || tx.product_sku.len > 0
