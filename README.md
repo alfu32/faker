@@ -56,11 +56,17 @@ v install khalyomede.faker
 ## Examples
 
 - Fake data
+  - Company
+    - [Company name](#company-name)
   - Date
     - [Future date](#future-date)
     - [Past date](#past-date)
+  - Finance
+    - [Visa credit card number](#visa-credit-card-number)
   - Identifiers
     - [UUID v4](#uuid-v4)
+  - Network
+    - [IP V4](#ip-v4)
   - Text
     - [Sentence](#sentence)
     - [Word](#word)
@@ -85,6 +91,24 @@ fn test_it_returns_a_value() {
   fake := Faker{}
 
   terms_of_use_accepted := fake.boolean()
+
+  // ...
+}
+```
+
+[Back to examples](#examples)
+
+### Company name
+
+```v
+module test
+
+import khalyomede.faker { Faker }
+
+fn test_it_generates_company_name() {
+  mut fake := Faker{}
+
+  company := fake.company_name()
 
   // ...
 }
@@ -121,6 +145,24 @@ fn test_it_generates_future_date() {
   fake := Faker{}
 
   meeting_date := fake.future_date()
+
+  // ...
+}
+```
+
+[Back to examples](#examples)
+
+### IP V4
+
+```v
+module test
+
+import khalyomede.faker { Faker }
+
+fn test_it_generates_ip_v4() {
+  mut fake := Faker{}
+
+  ip := fake.ip_v4()
 
   // ...
 }
@@ -209,6 +251,24 @@ fn test_it_returns_url() {
   fake := Faker{}
 
   payment_id := fake.uuid_v4()
+
+  // ...
+}
+```
+
+[Back to examples](#examples)
+
+### Visa credit card number
+
+```v
+module test
+
+import khalyomede.faker { Faker }
+
+fn test_it_generates_visa_credit_card_number() {
+  mut fake := Faker{}
+
+  credit_card := fake.visa_credit_card_number()
 
   // ...
 }
